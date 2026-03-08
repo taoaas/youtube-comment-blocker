@@ -1,4 +1,4 @@
-# youtube-comment-blocker
+# YouTubeコメント非表示（GoogleChrome拡張機能）
 ## プライバシーポリシー
 本拡張機能「YouTubeコメント非表示」は、ユーザーのいかなる個人情報も収集、保存、または外部へ送信することはありません。
 ## ライセンス
