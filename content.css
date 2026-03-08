@@ -1,0 +1,37 @@
+/* =========================================
+   YouTube コメント制御 (クラスによる個別制御)
+   ========================================= */
+
+/* --- 通常動画: 非表示 --- */
+html.hide-yt-comments-regular ytd-comments#comments,
+html.hide-yt-comments-regular #comments-skeleton {
+    display: none !important;
+}
+
+
+/* --- Shorts動画: グレーアウト・無効化 --- */
+
+/*
+  コメントボタン本体とラベル（数字）を含む外側の label 要素
+  aria-label に "コメント" という文字列が含まれるボタンを持つものを対象にする
+*/
+html.dim-yt-comments-shorts #shorts-container label.yt-spec-button-shape-with-label:has(button[aria-label*="コメント"]) {
+    opacity: 0.2 !important;
+    filter: grayscale(1) !important;
+    pointer-events: none !important;
+    user-select: none !important;
+    cursor: default !important;
+}
+
+/* 念のためボタン自体も直接グレーアウト */
+html.dim-yt-comments-shorts #shorts-container button[aria-label*="コメント"] {
+    opacity: 0.2 !important;
+    filter: grayscale(1) !important;
+    pointer-events: none !important;
+}
+
+
+/* コメントパネル（開いてしまった場合も非表示に） */
+html.dim-yt-comments-shorts ytd-engagement-panel-section-list-renderer[target-id="engagement-panel-comments-section"] {
+    display: none !important;
+}
