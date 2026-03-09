@@ -5,7 +5,7 @@ Antigravityにて作成しました
 ## ライセンス
 このプロジェクトは [MIT ライセンス](LICENSE) の下で公開されています。
 ## 拡張機能のインストール（Chromeウェブストア）
-ただいまGoogleによる審査中です　審査完了次第、Chromeウェブストアへのリンクをこちらに記載します
+https://chromewebstore.google.com/detail/pifidmkobneclbkekckmchogpgnlemnf?utm_source=item-share-cbよりダウンロードしてください
 ## インストール方法（開発者モード）
 1. このリポジトリをダウンロード（またはクローン）して解凍します。
 2. Chrome ブラウザで `chrome://extensions/` を開きます。
