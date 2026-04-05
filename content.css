@@ -3,35 +3,69 @@
    ========================================= */
 
 /* --- 通常動画: 非表示 --- */
-html.hide-yt-comments-regular ytd-comments#comments,
+html.hide-yt-comments-regular ytd-comments#comments > *:not(#yt-comment-blocker-indicator),
 html.hide-yt-comments-regular #comments-skeleton {
     display: none !important;
 }
 
-
-/* --- Shorts動画: グレーアウト・無効化 --- */
-
-/*
-  コメントボタン本体とラベル（数字）を含む外側の label 要素
-  aria-label に "コメント" という文字列が含まれるボタンを持つものを対象にする
-*/
-html.dim-yt-comments-shorts #shorts-container label.yt-spec-button-shape-with-label:has(button[aria-label*="コメント"]) {
-    opacity: 0.2 !important;
-    filter: grayscale(1) !important;
-    pointer-events: none !important;
-    user-select: none !important;
-    cursor: default !important;
+/* JS で挿入するインジケーターのスタイル */
+.yt-comment-blocker-indicator {
+    display: block;
+    padding: 30px 20px;
+    margin: 20px 0;
+    text-align: center;
+    background-color: #f9f9f9;
+    color: #606060;
+    border: 1px solid #e5e5e5;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 14px;
+    font-family: "Roboto", sans-serif;
 }
 
-/* 念のためボタン自体も直接グレーアウト */
+/* YouTubeのダークモード対応 */
+html[dark] .yt-comment-blocker-indicator,
+html[dark="true"] .yt-comment-blocker-indicator {
+    background-color: #272727;
+    color: #aaaaaa;
+    border-color: #3f3f3f;
+}
+
+
+/* --- Shorts動画: グレーアウト --- */
+
+/* コメントボタンをグレーアウト（クリックはJSで制御） */
 html.dim-yt-comments-shorts #shorts-container button[aria-label*="コメント"] {
-    opacity: 0.2 !important;
+    opacity: 0.5 !important;
     filter: grayscale(1) !important;
-    pointer-events: none !important;
 }
 
 
 /* コメントパネル（開いてしまった場合も非表示に） */
 html.dim-yt-comments-shorts ytd-engagement-panel-section-list-renderer[target-id="engagement-panel-comments-section"] {
     display: none !important;
+}
+
+/* --- トースト通知（Shortsでコメントボタンを押したとき） --- */
+.yt-comment-blocker-toast {
+    position: fixed;
+    bottom: 80px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(33, 33, 33, 0.95);
+    color: #fff;
+    padding: 14px 24px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    z-index: 99999;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    white-space: nowrap;
+}
+.yt-comment-blocker-toast.show {
+    opacity: 1;
 }
