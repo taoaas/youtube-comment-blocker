@@ -1,3 +1,20 @@
+# YouTube Comment Blocker (Google Chrome Extension)
+Created by Google Antigravity.
+## Privacy Policy
+The "Hide YouTube Comments" extension does not collect, store, or transmit any personal user information.
+(We use Google Analytics to analyze anonymized usage patterns.)
+## License
+This project is licensed under the [MIT License](LICENSE)
+## Installation (Chrome Web Store)
+Download it from the Chrome Web Store:
+https://chromewebstore.google.com/detail/pifidmkobneclbkekckmchogpgnlemnf?utm_source=item-share-cb
+## Manual Installation (Developer Mode)
+1.Download (or clone) this repository and extract the files.
+2.Open chrome://extensions/ in your Chrome browser.
+3.Enable "Developer mode" in the top right corner.
+4.Click "Load unpacked" and select the extracted folder.
+
+
 # YouTubeコメント非表示（GoogleChrome拡張機能）
 Google Antigravityにて作成しました
 ## プライバシーポリシー
