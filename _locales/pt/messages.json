@@ -1,0 +1,30 @@
+{
+  "extName": {
+    "message": "Bloqueador de Comentários do YouTube",
+    "description": "The name of the extension."
+  },
+  "extDescription": {
+    "message": "Oculta a seção de comentários do YouTube. Pode ser ativado/desativado.",
+    "description": "A description of the extension."
+  },
+  "masterSetting": {
+    "message": "Interruptor Principal",
+    "description": "Label for the master settings switch."
+  },
+  "regularVideos": {
+    "message": "Vídeos normais (Ocultos)",
+    "description": "Label for the regular videos switch."
+  },
+  "shortsVideos": {
+    "message": "Shorts (Escurecidos)",
+    "description": "Label for the shorts videos switch."
+  },
+  "hiddenIndicator": {
+    "message": "Os comentários estão ocultos pelo Bloqueador de Comentários do YouTube",
+    "description": "Message shown when comments are hidden."
+  },
+  "hiddenLabel": {
+    "message": "Oculto",
+    "description": "Label for the hidden state in Shorts."
+  }
+}
