@@ -1,0 +1,30 @@
+{
+  "extName": {
+    "message": "YouTube Comment Blocker",
+    "description": "The name of the extension."
+  },
+  "extDescription": {
+    "message": "Hides the YouTube comment section. Can be toggled ON/OFF.",
+    "description": "A description of the extension."
+  },
+  "masterSetting": {
+    "message": "Master Switch",
+    "description": "Label for the master settings switch."
+  },
+  "regularVideos": {
+    "message": "Regular Videos (Hidden)",
+    "description": "Label for the regular videos switch."
+  },
+  "shortsVideos": {
+    "message": "Shorts (Dimmed)",
+    "description": "Label for the shorts videos switch."
+  },
+  "hiddenIndicator": {
+    "message": "Comments are hidden by YouTube Comment Blocker",
+    "description": "Message shown when comments are hidden."
+  },
+  "hiddenLabel": {
+    "message": "Hidden",
+    "description": "Label for the hidden state in Shorts."
+  }
+}

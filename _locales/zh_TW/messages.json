@@ -1,0 +1,30 @@
+{
+  "extName": {
+    "message": "YouTube Comment Blocker",
+    "description": "The name of the extension."
+  },
+  "extDescription": {
+    "message": "隱藏 YouTube 留言區。可以切換開啟/關閉。",
+    "description": "A description of the extension."
+  },
+  "masterSetting": {
+    "message": "一鍵設置",
+    "description": "Label for the master settings switch."
+  },
+  "regularVideos": {
+    "message": "普通影片 (隱藏)",
+    "description": "Label for the regular videos switch."
+  },
+  "shortsVideos": {
+    "message": "Shorts (變暗)",
+    "description": "Label for the shorts videos switch."
+  },
+  "hiddenIndicator": {
+    "message": "留言已由 YouTube Comment Blocker 隱藏",
+    "description": "Message shown when comments are hidden."
+  },
+  "hiddenLabel": {
+    "message": "已隱藏",
+    "description": "Label for the hidden state in Shorts."
+  }
+}

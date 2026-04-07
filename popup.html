@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <style>
+    /* ポップアップの全体のスタイル設定 */
     body {
       width: 250px;
       padding: 15px;
@@ -10,6 +11,7 @@
       background: #ffffff;
       margin: 0;
     }
+    /* ヘッダー部分のデザイン */
     .header {
       font-size: 16px;
       font-weight: bold;
@@ -18,11 +20,13 @@
       border-bottom: 2px solid #ff0000;
       padding-bottom: 5px;
     }
+    /* 設定ボタンを並べるグループのスタイル */
     .control-group {
       display: flex;
       flex-direction: column;
       gap: 15px;
     }
+    /* 各設定項目のレイアウト（ラベルとスイッチを左右に配置） */
     .item {
       display: flex;
       justify-content: space-between;
@@ -32,6 +36,7 @@
       font-size: 14px;
       color: #444;
     }
+    /* マスタースイッチ（全体設定）用の特別なスタイル */
     .master-item {
       padding-bottom: 15px;
       margin-bottom: 5px;
@@ -41,18 +46,20 @@
       font-weight: bold;
     }
 
-    /* スイッチのデザイン */
+    /* ON/OFFを切り替える「スイッチ」のCSSデザイン */
     .switch {
       position: relative;
       display: inline-block;
       width: 46px;
       height: 24px;
     }
+    /* 実際のチェックボックスは隠して、スライダーを表示する */
     .switch input {
       opacity: 0;
       width: 0;
       height: 0;
     }
+    /* スライダーの背景 */
     .slider {
       position: absolute;
       cursor: pointer;
@@ -64,6 +71,7 @@
       transition: .4s;
       border-radius: 24px;
     }
+    /* スライダーの丸いボタン部分 */
     .slider:before {
       position: absolute;
       content: "";
@@ -75,39 +83,54 @@
       transition: .4s;
       border-radius: 50%;
     }
+    /* チェックが入った時（ON）の背景色 */
     input:checked + .slider {
       background-color: #ff0000;
     }
+    /* チェックが入った時に丸いボタンを右へ動かす */
     input:checked + .slider:before {
       transform: translateX(22px);
     }
   </style>
 </head>
 <body>
-  <div class="header">YouTube Comment Blocker</div>
+  <!-- 
+    data-i18n 属性: 
+    JavaScript (popup.js) がこの属性を見て、messages.json から適切な翻訳テキストを読み込み、
+    この要素の文字書き換えます（多言語化の仕組み）。
+  -->
+  <div class="header" data-i18n="extName">YouTube Comment Blocker</div>
+  
   <div class="control-group">
+    <!-- 一括設定（マスタースイッチ） -->
     <div class="item master-item">
-      <label for="master">一括設定</label>
+      <label for="master" data-i18n="masterSetting">一括設定</label>
       <label class="switch">
         <input type="checkbox" id="master">
         <span class="slider"></span>
       </label>
     </div>
+
+    <!-- 通常動画（通常の視聴ページ）の設定 -->
     <div class="item">
-      <label for="regular">通常動画 (非表示)</label>
+      <label for="regular" data-i18n="regularVideos">通常動画 (非表示)</label>
       <label class="switch">
         <input type="checkbox" id="regular">
         <span class="slider"></span>
       </label>
     </div>
+
+    <!-- YouTube Shorts（ショート動画）の設定 -->
     <div class="item">
-      <label for="shorts">Shorts (グレーアウト)</label>
+      <label for="shorts" data-i18n="shortsVideos">Shorts (グレーアウト)</label>
       <label class="switch">
         <input type="checkbox" id="shorts">
         <span class="slider"></span>
       </label>
     </div>
   </div>
+
+  <!-- ポップアップの動作を制御するスクリプトを読み込み -->
   <script src="popup.js"></script>
 </body>
 </html>

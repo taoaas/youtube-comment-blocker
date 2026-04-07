@@ -1,0 +1,30 @@
+{
+  "extName": {
+    "message": "YouTube Comment Blocker",
+    "description": "The name of the extension."
+  },
+  "extDescription": {
+    "message": "YouTube 댓글 창을 숨깁니다. ON/OFF 전환이 가능합니다.",
+    "description": "A description of the extension."
+  },
+  "masterSetting": {
+    "message": "일괄 설정",
+    "description": "Label for the master settings switch."
+  },
+  "regularVideos": {
+    "message": "일반 동영상 (숨김)",
+    "description": "Label for the regular videos switch."
+  },
+  "shortsVideos": {
+    "message": "Shorts (어둡게)",
+    "description": "Label for the shorts videos switch."
+  },
+  "hiddenIndicator": {
+    "message": "YouTube Comment Blocker에 의해 댓글이 숨겨졌습니다",
+    "description": "Message shown when comments are hidden."
+  },
+  "hiddenLabel": {
+    "message": "숨김",
+    "description": "Label for the hidden state in Shorts."
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "extName": {
+    "message": "YouTube Comment Blocker",
+    "description": "The name of the extension."
+  },
+  "extDescription": {
+    "message": "YouTubeのコメント欄を非表示にします。ON/OFFの切り替えが可能です。",
+    "description": "A description of the extension."
+  },
+  "masterSetting": {
+    "message": "一括設定",
+    "description": "Label for the master settings switch."
+  },
+  "regularVideos": {
+    "message": "通常動画 (非表示)",
+    "description": "Label for the regular videos switch."
+  },
+  "shortsVideos": {
+    "message": "Shorts (グレーアウト)",
+    "description": "Label for the shorts videos switch."
+  },
+  "hiddenIndicator": {
+    "message": "YouTube Comment Blocker によりコメントは非表示になっています",
+    "description": "Message shown when comments are hidden."
+  },
+  "hiddenLabel": {
+    "message": "非表示",
+    "description": "Label for the hidden state in Shorts."
+  }
+}

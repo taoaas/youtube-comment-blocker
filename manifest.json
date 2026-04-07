@@ -1,9 +1,12 @@
 {
   "manifest_version": 3,
-  "name": "YouTube Comment Blocker",
-  "version": "1.2",
-  "description": "YouTubeのコメント欄を非表示にします。ON/OFFの切り替えが可能です。",
-  "permissions": ["storage"],
+  "name": "__MSG_extName__",
+  "default_locale": "en",
+  "version": "1.3",
+  "description": "__MSG_extDescription__",
+  "permissions": [
+    "storage"
+  ],
   "icons": {
     "16": "icon.png",
     "48": "icon.png",
@@ -19,9 +22,15 @@
   },
   "content_scripts": [
     {
-      "matches": ["*://*.youtube.com/*"],
-      "js": ["content.js"],
-      "css": ["content.css"],
+      "matches": [
+        "*://*.youtube.com/*"
+      ],
+      "js": [
+        "content.js"
+      ],
+      "css": [
+        "content.css"
+      ],
       "run_at": "document_start"
     }
   ]
